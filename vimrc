@@ -41,8 +41,8 @@ set shiftwidth=4 " set auto indent width to 4 when switch lines
 set tabstop=4 " set indent width to 4
 set expandtab " use spaces instead of tab 
 
-autocmd BufNewFile *.py      0r ~/.vim/skeleton/py.skel
-autocmd BufNewFile Android.mk 0r ~/.vim/skeleton/Android.mk.skel
+"autocmd BufNewFile *.py      0r ~/.vim/skeleton/py.skel
+"autocmd BufNewFile Android.mk 0r ~/.vim/skeleton/Android.mk.skel
 
 " nmap // <ESC>^i//<ESC>
 
