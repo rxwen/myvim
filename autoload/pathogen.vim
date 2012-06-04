@@ -69,6 +69,10 @@ function! pathogen#legacyjoin(...) abort " {{{1
   return call('pathogen#join',[1] + a:000)
 endfunction " }}}1
 
+
+
+
+
 " Remove duplicates from a list.
 function! pathogen#uniq(list) abort " {{{1
   let i = 0
