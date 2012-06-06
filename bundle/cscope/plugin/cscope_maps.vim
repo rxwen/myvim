@@ -28,6 +28,9 @@
 " when it was compiled.  If it wasn't, time to recompile vim... 
 if has("cscope")
 
+    " use quickfix window as cscope's output window
+    set cscopequickfix=s-,g-,d-,c-,t-,e-,f-,i-
+
     """"""""""""" Standard cscope/vim boilerplate
 
     " use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
