@@ -3,15 +3,6 @@ source $VIMRUNTIME/vimrc_example.vim
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
 
-" Alt-Space is System menu
-if has("gui")
-  noremap <M-Space> :simalt ~<CR>
-  inoremap <M-Space> <C-O>:simalt ~<CR>
-  cnoremap <M-Space> <C-C>:simalt ~<CR>
-
-  set guifont=Consolas:h11 " set font to Consolas, height 11
-endif
-
 " initialize pathogen plugin
 call pathogen#infect()
 
@@ -103,3 +94,13 @@ nnoremap \gd :Gdiff<CR>
 
 nnoremap \p< o#include  <>i
 nnoremap \p" o#include  ""i
+
+" Alt-Space is System menu
+if has("gui")
+  noremap <M-Space> :simalt ~<CR>
+  inoremap <M-Space> <C-O>:simalt ~<CR>
+  cnoremap <M-Space> <C-C>:simalt ~<CR>
+
+  set guifont=Consolas:h11 " set font to Consolas, height 11
+endif
+
