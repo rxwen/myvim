@@ -17,9 +17,11 @@ nnoremap <C-W>t :tabnew<CR>
 " yank current file name to unamed register
 nnoremap \fp :let @"=expand("%:p")<CR> 
 nnoremap \fn :let @"=expand("%:t")<CR> 
+nnoremap \fd :let @"=expand("%:p:h")<CR> 
 " yank current file name to clipboard 
 nnoremap \fP :let @*=expand("%:p")<CR> 
 nnoremap \fN :let @*=expand("%:t")<CR> 
+nnoremap \fD :let @*=expand("%:p:h")<CR> 
 " tcsh-style editing keys
 :cnoremap <C-A> <Home>
 :cnoremap <C-F> <Right>
@@ -48,7 +50,7 @@ vmap n y/<C-R>"<CR>
 " start fuzzyfinder mapping 
 nmap \ff :FufFile<CR>
 nmap \fb :FufBuffer<CR>
-nmap \fd :FufDir<CR>
+"nmap \fd :FufDir<CR>
 nmap \fma :FufBookmarkFileAdd<CR>
 nmap \fmf :FufBookmarkFile<CR>
 nmap \fmd :FufBookmarkDir<CR>
