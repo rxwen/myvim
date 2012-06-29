@@ -81,3 +81,6 @@ nnoremap \gs :Gstatus<CR>
 nnoremap \gl :Glog<CR>
 nnoremap \gb :Gblame<CR>
 nnoremap \gd :Gdiff<CR>
+
+" map F8 to run make command
+nnoremap <F8> :make<CR>
