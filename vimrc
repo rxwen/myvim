@@ -84,3 +84,6 @@ nnoremap \gd :Gdiff<CR>
 
 " map F8 to run make command
 nnoremap <F8> :make<CR>
+
+" support ant errorformat, see :help errorformat-ant and :help let-option
+let &efm = '%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#,' . &efm
