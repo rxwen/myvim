@@ -110,6 +110,8 @@ if has("gui")
 endif
 
 "clang-complete options
+
+"let g:clang_user_options = '2> NUL || exit 0"' " this doesn't work, need to change shellredir
 let g:clang_complete_auto = 0
 "let g:clang_close_preview = 1
 "let g:clang_use_library = 1
