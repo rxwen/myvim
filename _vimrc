@@ -109,3 +109,12 @@ if has("gui")
   set guifont=Consolas:h11 " set font to Consolas, height 11
 endif
 
+"clang-complete options
+let g:clang_complete_auto = 0
+"let g:clang_close_preview = 1
+"let g:clang_use_library = 1
+"let g:clang_snippets = 1 " don't add parameters when complete a kword
+"let g:clang_auto_select = 1
+"set completeopt=menu,longest
+"let g:clang_hl_errors = 0
+"let g:clang_library_path = 'c:/Release'
