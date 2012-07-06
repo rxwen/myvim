@@ -98,3 +98,8 @@ let g:clang_auto_select = 1
 "set completeopt=menu,longest
 "let g:clang_hl_errors = 0
 
+" eclim options
+nnoremap \js    :JavaSet<CR>
+nnoremap \jg    :JavaGet<CR>
+nnoremap \jf    :JavaFormat<CR>
+nnoremap \ji    :JavaImport<CR>
