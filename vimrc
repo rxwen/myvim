@@ -93,7 +93,8 @@ let &efm = '%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#,' . &efm
 "clang-complete options
 let g:clang_close_preview = 1
 let g:clang_use_library = 1
-"let g:clang_snippets = 1
+"let g:clang_snippets = 1 " don't add parameters when complete a kword
 let g:clang_auto_select = 1
-set completeopt=menu,longest
+"set completeopt=menu,longest
+"let g:clang_hl_errors = 0
 
