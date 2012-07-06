@@ -89,3 +89,11 @@ nnoremap <F8> :make<CR>
 let &efm = '\ %#[aapt]\ %f:%l:\ %m,' . &efm
 " support ant errorformat, see :help errorformat-ant and :help let-option
 let &efm = '%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#,' . &efm
+
+"clang-complete options
+let g:clang_close_preview = 1
+let g:clang_use_library = 1
+"let g:clang_snippets = 1
+let g:clang_auto_select = 1
+set completeopt=menu,longest
+
