@@ -110,13 +110,13 @@ if has("gui")
 endif
 
 "clang-complete options
-
-"let g:clang_user_options = '2> NUL || exit 0"' " this doesn't work, need to change shellredir
+"let g:clang_exec = "e:\\clang\\clang.exe"
+"let g:clang_user_options = '2> NUL || exit 0"'
 let g:clang_complete_auto = 0
-"let g:clang_close_preview = 1
-"let g:clang_use_library = 1
+let g:clang_close_preview = 1
+let g:clang_use_library = 1
 "let g:clang_snippets = 1 " don't add parameters when complete a kword
-"let g:clang_auto_select = 1
+let g:clang_auto_select = 1
 "set completeopt=menu,longest
 "let g:clang_hl_errors = 0
-"let g:clang_library_path = 'c:/Release'
+let g:clang_library_path = 'e:\\clang\\'
