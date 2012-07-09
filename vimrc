@@ -91,6 +91,7 @@ let &efm = '\ %#[aapt]\ %f:%l:\ %m,' . &efm
 let &efm = '%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#,' . &efm
 
 "clang-complete options
+let g:clang_complete_auto = 0
 let g:clang_close_preview = 1
 let g:clang_use_library = 1
 "let g:clang_snippets = 1 " don't add parameters when complete a kword
