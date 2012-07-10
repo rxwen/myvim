@@ -120,3 +120,8 @@ let g:clang_auto_select = 1
 "set completeopt=menu,longest
 "let g:clang_hl_errors = 0
 let g:clang_library_path = 'e:\\clang\\'
+
+" nerdtree options
+nnoremap \nt    :NERDTree<CR>
+nnoremap \nT    :NERDTree 
+nnoremap \nf    :NERDTreeFind<CR>
