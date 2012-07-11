@@ -106,6 +106,6 @@ nnoremap \jf    :JavaFormat<CR>
 nnoremap \ji    :JavaImport<CR>
 
 " nerdtree options
-nnoremap \nt    :NERDTree<CR>
+nnoremap \nt    :NERDTreeFocus<CR>
 nnoremap \nT    :NERDTree 
 nnoremap \nf    :NERDTreeFind<CR>

@@ -122,6 +122,6 @@ let g:clang_auto_select = 1
 let g:clang_library_path = 'e:\\clang\\'
 
 " nerdtree options
-nnoremap \nt    :NERDTree<CR>
+nnoremap \nt    :NERDTreeFocus<CR>
 nnoremap \nT    :NERDTree 
 nnoremap \nf    :NERDTreeFind<CR>
