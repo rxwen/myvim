@@ -125,3 +125,8 @@ let g:clang_library_path = 'e:\\clang\\'
 nnoremap \nt    :NERDTreeFocus<CR>
 nnoremap \nT    :NERDTree 
 nnoremap \nf    :NERDTreeFind<CR>
+
+" snipMate options
+let g:snippets_dir = "$VIMRUNTIME/vimfiles/snippets"
+let g:snips_email = "rx.wen218@gmail.com"
+let g:snips_author = "Raymond Wen"

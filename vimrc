@@ -104,8 +104,14 @@ nnoremap \js    :JavaSet<CR>
 nnoremap \jg    :JavaGet<CR>
 nnoremap \jf    :JavaFormat<CR>
 nnoremap \ji    :JavaImport<CR>
+nnoremap \jc    :JavaCorrect<CR>
 
 " nerdtree options
 nnoremap \nt    :NERDTreeFocus<CR>
 nnoremap \nT    :NERDTree 
 nnoremap \nf    :NERDTreeFind<CR>
+
+" snipMate options
+let g:snippets_dir = "$HOME/.vim/snippets"
+let g:snips_email = "rx.wen218@gmail.com"
+let g:snips_author = "Raymond Wen"
