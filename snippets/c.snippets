@@ -13,7 +13,7 @@ snippet mainn
 	}
 # #include <...>
 snippet inc
-	#include <${1:stdio}.h>${2}
+	#include <${1:stdio.h}>${2}
 # #include "..."
 snippet Inc
 	#include "${1:`Filename("$1.h")`}"${2}
@@ -34,8 +34,7 @@ snippet #if
 	#endif
 # Header Include-Guard
 snippet once
-	#ifndef ${1:`toupper(Filename('$1_H', 'UNTITLED_H'))`}
-
+	#ifndef ${1:`toupper(Filename('$1_H', 'UNTITLED_H'))`_}
 	#define $1
 
 	${2}
