@@ -1,0 +1,51 @@
+snippet graph
+	digraph G {
+	}
+snippet graph?
+	digraph G {
+		bgcolor=${1:white};
+		margin=${2:1};
+		ranksep=${3:"1.1 equally"};
+		nodesep=${4:"1.0 equally"};
+		rankdir=${5:LR|TB|BT|RL};
+	}
+snippet node?
+	node [shape=${1:record|box|triangle|ellipse|plaintext|diamond|point},
+		fillcolor=${2:grey},
+		color=${3:blue},
+		label=${4:"label"},
+		style=${5:solid|dashed|dotted|bold|filled|diagonals|rounded},
+		fontcolor=${6:black}]
+snippet edge?
+	edge [label=${1:"label"},
+		headport=${2:n|ne|e|se|s|sw|w|nw},
+		tailport=${3:n|ne|e|se|s|sw|w|nw},
+		color=${4:black},
+		weight=${5:2},
+		lhead=${6:cluster_name},
+		arrowhead=${7:empty|normal|dot|odot|inv|none|diamond|odiamond},
+		style=${8:bold|dotted|filled|dotted}
+	]
+snippet rank
+	{ rank = same; ${1:node1;} }
+snippet record
+	${1:name} [shape=record,label="${2:h_field1|{<port_name> v_field2|v_field3}}"]
+snippet edge
+	a:port -> b:port
+snippet cluster
+	subgraph ${1:cluster} {
+		style=filled;
+		color=${2:white};
+		label=${3:"label"}
+	}
+snippet inherit
+	${1:child} -> ${2:parent} [arrowhead=empty]
+snippet aggregation
+	${1:item} -> ${2:container} [arrowhead=odiamond]
+snippet composition
+	${1:part} -> ${2:whole} [arrowhead=diamond]
+snippet	class
+	${1:name} [shape=record,label="${2:class_name}|${3:+ fun1\n+ fun2}|${4:- filed1\n-filed2}"]
+snippet	if
+	${1:check} [shape=diamond,label="${2:check if?}"]
+	
