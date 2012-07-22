@@ -1,14 +1,14 @@
 #http://www.graphviz.org/doc/info/index.html
 snippet graph
-	digraph G {
+	digraph ${1:G} {
 	}
 snippet graph?
-	digraph G {
-		bgcolor=${1:white};
-		pad=${2:1};
-		ranksep=${3:"1.1 equally"};
-		nodesep=${4:"1.0 equally"};
-		rankdir=${5:LR|TB|BT|RL};
+	digraph ${1:G} {
+		bgcolor=${2:white};
+		pad=${3:0.5};
+		ranksep=${4:"1.1 equally"};
+		nodesep=${5:"1.0 equally"};
+		rankdir=${6:LR|TB|BT|RL};
 	}
 snippet node?
 	node [shape=${1:record|box|triangle|ellipse|plaintext|diamond|point|folder|box3d|component|circle|note|tab},
@@ -16,7 +16,9 @@ snippet node?
 		color=${3:blue},
 		label=${4:"label"},
 		style=${5:solid|dashed|dotted|bold|filled|diagonals|rounded},
-		fontcolor=${6:black}]
+		fontcolor=${6:black},
+		group=${7:group},
+		image=${8:"path"}];
 snippet edge?
 	edge [label=${1:"label"},
 		headport=${2:n|ne|e|se|s|sw|w|nw},
@@ -24,36 +26,39 @@ snippet edge?
 		color=${4:black},
 		weight=${5:2},
 		lhead=${6:cluster_name},
-		arrowhead=${7:empty|normal|dot|odot|inv|none|diamond|odiamond},
-		style=${8:bold|dotted|filled|dotted},
+		arrowhead=${7:empty|normal|dot|odot|inv|none|diamond|odiamond|vee},
+		style=${8:bold|dotted|solid|filled|dashed},
 		headlabel=${9:"headlabel or taillabel"}
-	]
+	];
 snippet rank
 	{ rank = same; ${1:node1;} }
 snippet record
-	${1:name} [shape=record,label="${2:h_field1|{<port_name> v_field2|v_field3}}"]
+	${1:name} [shape=record,label="${2:h_field1|{<port_name> v_field2|v_field3}}"];
 snippet edge
-	${1:node:port} -> ${2:node2:port}
+	${1:node:port} -> ${2:node2:port};
 snippet cluster
-	subgraph ${1:cluster} {
-		style=filled;
-		color=${2:white};
+	subgraph cluster_${1:name} {
+		color=${2:black};
 		label=${3:"label"}
+		style=${4:bold|dotted|solid|filled|dashed};
 	}
 #inherit
 snippet inh
-	${1:child} -> ${2:parent} [arrowhead=empty]
+	${1:child} -> ${2:parent} [arrowhead=empty];
 #aggregation
 snippet agg
-	${1:item} -> ${2:container} [arrowhead=odiamond]
+	${1:item} -> ${2:container} [arrowhead=odiamond];
 #composition
 snippet com
-	${1:part} -> ${2:whole} [arrowhead=diamond]
+	${1:part} -> ${2:whole} [arrowhead=diamond];
 #implements
 snippet imp
-	${1:class} -> ${2:interface} [arrowhead=empty,style=dashed]
+	${1:class} -> ${2:interface} [arrowhead=empty,style=dashed];
+#depends
+snippet dep
+	${1:class} -> ${2:target} [arrowhead=vee,style=dashed];
 snippet	class
-	${1:name} [shape=record,label="${2:class_name}|${3:- attr1\n- attr2}|${4:+ method}"]
+	${1:name} [shape=record,label="{${2:class_name}|${3:- attr1\n- attr2}|${4:+ method}}"];
 snippet	if
-	${1:check} [shape=diamond,label="${2:check if?}"]
+	${1:check} [shape=diamond,label="${2:check if?}"];
 	
