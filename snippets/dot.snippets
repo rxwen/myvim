@@ -15,7 +15,7 @@ snippet node?
 		fillcolor=${2:grey},
 		color=${3:blue},
 		label=${4:"label"},
-		style=${5:solid|dashed|dotted|bold|filled|diagonals|rounded},
+		style=${5:solid|dashed|dotted|bold|filled|diagonals|rounded|invis},
 		fontcolor=${6:black},
 		group=${7:group},
 		image=${8:"path"}];
@@ -27,9 +27,8 @@ snippet edge?
 		weight=${5:2},
 		lhead=${6:cluster_name},
 		arrowhead=${7:empty|normal|dot|odot|inv|none|diamond|odiamond|vee},
-		style=${8:bold|dotted|solid|filled|dashed},
-		headlabel=${9:"headlabel or taillabel"}
-	];
+		style=${8:bold|dotted|solid|filled|dashed|invis},
+		headlabel=${9:"headlabel or taillabel"}];
 snippet rank
 	{ rank = same; ${1:node1;} }
 snippet record
@@ -39,7 +38,7 @@ snippet edge
 snippet cluster
 	subgraph cluster_${1:name} {
 		color=${2:black};
-		label=${3:"label"}
+		label=${3:"label"};
 		style=${4:bold|dotted|solid|filled|dashed};
 	}
 #inherit
