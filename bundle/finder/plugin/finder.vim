@@ -44,7 +44,14 @@ endfunction
 " Find file with locate utility 
 function! Locate(...)
     let pattern = a:1
-    let l:cmd = "locate -r ".pattern
+    let exe_name = "locate"
+    if has("win16") || has("win32") || has("win64")
+        " use es.exe from everything(http://www.voidtools.com/) on windows
+        " it's required to add Everything installation directory to PATH
+        let exe_name = "es.exe"
+    endif
+    let l:cmd = exe_name." -r ".pattern
+    echo l:cmd
     let l:list=system(l:cmd)
     let l:num=strlen(substitute(l:list, "[^\n]", "", "g"))
     if v:shell_error != 0 || l:num < 1
