@@ -118,3 +118,5 @@ let g:snips_author = "Raymond Wen"
 
 " finder utility
 nnoremap \fi :Find 
+nnoremap \fI :FindNoCase 
+nnoremap \lo :Locate 
