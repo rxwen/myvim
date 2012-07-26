@@ -130,3 +130,6 @@ nnoremap \nf    :NERDTreeFind<CR>
 let g:snippets_dir = "$VIM/vimfiles/snippets"
 let g:snips_email = "rx.wen218@gmail.com"
 let g:snips_author = "Raymond Wen"
+
+" finder utility
+nnoremap \fi :Find 
