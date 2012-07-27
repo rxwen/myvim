@@ -5,31 +5,31 @@ snippet graph
 snippet graph?
 	digraph ${1:G} {
 		bgcolor=${2:white};
-		pad=${3:0.5};
+		pad=${3:0.5};/* the spaces appended to the edge of the drawing */
 		ranksep=${4:"1.1 equally"};
 		nodesep=${5:"1.0 equally"};
 		rankdir=${6:LR|TB|BT|RL};
 		splines=${7:""|true|false|ortho};
 	}
 snippet node?
-	node [shape=${1:record|box|triangle|ellipse|plaintext|diamond|point|folder|box3d|component|circle|note|tab},
-		fillcolor=${2:grey},
-		color=${3:blue},
-		label=${4:"label"},
-		style=${5:solid|dashed|dotted|bold|filled|diagonals|rounded|invis},
-		fontcolor=${6:black},
-		group=${7:group},
-		image=${8:"path"}];
+	node [shape=${1:record|Mrecord|box|triangle|ellipse|plaintext|diamond|point|folder|box3d|component|circle|note|tab},
+		color=${2:blue},
+		label=${3:"label"},
+		style=${4:solid|dashed|dotted|bold|filled|diagonals|rounded|invis},
+		fontcolor=${5:black},
+		group=${6:"group_name"},/* if end points of an edge belong to the same group, dot tries to avoid corssing and keep edges straight */
+		image=${7:"path"}];
 snippet edge?
 	edge [label=${1:"label"},
-		headport=${2:n|ne|e|se|s|sw|w|nw},
-		tailport=${3:n|ne|e|se|s|sw|w|nw},
+		headport=${2:n|ne|e|se|s|sw|w|nw},/* specify tailport if desired */
 		color=${4:black},
-		weight=${5:2},
-		lhead=${6:cluster_name},
-		arrowhead=${7:empty|normal|dot|odot|inv|none|diamond|odiamond|vee},
-		style=${8:bold|dotted|solid|filled|dashed|invis},
-		headlabel=${9:"headlabel or taillabel"}];
+		lhead=${5:cluster_name},/* the head will point at the cluster contains the head node. specify ltail if desired */ 
+		arrowhead=${6:empty|normal|dot|odot|inv|none|diamond|odiamond|vee},
+		style=${7:bold|dotted|solid|filled|dashed|invis},
+		headlabel=${8:"headlabel or taillabel"},/* specify taillabel if desired */
+		samehead=${9:"head_name"},/* edges with the same name will point to the same point on target node, specify sametail if desired */];
+		constraint=${10:false},/* the edge doesn't affect rank assignment */
+		weight=${11:2}];
 snippet rank
 	{ rank = same; ${1:node1;} }
 snippet record
