@@ -30,7 +30,13 @@ nnoremap \fD :let @*=expand("%:p:h")<CR>
 syntax on
 set nocompatible
 set nu
-colo evening
+if has("mac")
+    colo darkblue
+    set guifont=Monaco:h13 " set font to Consolas, height 11
+else
+    colo evening
+endif
+
 set nobackup
 set ic 	"ignore case when search, to turn it off, run :set noic
 set smartindent
