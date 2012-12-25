@@ -41,6 +41,8 @@ set shiftwidth=4 " set auto indent width to 4 when switch lines
 set tabstop=4 " set indent width to 4
 set expandtab " use spaces instead of tab 
 
+let g:html_use_css = 0 " don't use css 
+
 autocmd BufNewFile *.py      0r ~/.vim/skeleton/py.skel
 autocmd BufNewFile Android.mk 0r ~/.vim/skeleton/Android.mk.skel
 autocmd BufNewFile *.tex    0r ~/.vim/skeleton/tex.skel
