@@ -129,4 +129,11 @@ nnoremap \fi :Find
 nnoremap \fI :FindNoCase 
 nnoremap \lo :Locate 
 
+" tagbar options
+let g:tagbar_autofocus = 1
+let g:tagbar_compact = 1
+let g:tagbar_autoshowtag = 1
+let g:tagbar_left = 1
+nnoremap \tg :TagbarToggle<CR>
+
 nnoremap \m  :Man 
