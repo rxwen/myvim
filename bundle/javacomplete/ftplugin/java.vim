@@ -24,7 +24,7 @@ if glob('AndroidManifest.xml') =~ ''
 endif
 
 setlocal omnifunc=javacomplete#Complete
-setlocal completefunc=javacomplete#CompleteParamsInfo
+setlocal completefunc=javacomplete#Complete
 
 " remap c-x,c-u to not select the first option by default
 " or we can set completeopt to 'longest,menuone'
