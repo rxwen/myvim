@@ -142,7 +142,3 @@ let g:tagbar_compact = 1
 let g:tagbar_autoshowtag = 1
 let g:tagbar_left = 1
 nnoremap \tg :TagbarToggle<CR>
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fb33f31393edf984d131b3f6485dd512b223b86
